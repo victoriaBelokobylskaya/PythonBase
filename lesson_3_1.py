@@ -2,12 +2,14 @@
 # Числа запрашивать у пользователя, предусмотреть обработку ситуации деления на ноль.
 
 def div_calc():
-    n_1 = float(input('Введите первое число:  '))
-    n_2 = float(input('Введите первое число:  '))
     try:
+        n_1 = float(input('Введите первое число:  '))
+        n_2 = float(input('Введите первое число:  '))
         return n_1 / n_2
-    except:
-        ZeroDivisionError
+    except ZeroDivisionError:
+        print('Деление на 0!!!')
+    except ValueError:
+        print('Введено не число')
 
 
 print(div_calc())
