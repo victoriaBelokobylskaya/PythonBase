@@ -7,6 +7,7 @@ class Matrix():
         self.m = m
         self.matrix = [[i + randint(1, 10) * j + randint(0, 20) for j in range(m)] for i in range(n)]
 
+
     def __str__(self):
         total = ''
         for line in self.matrix:
@@ -15,13 +16,12 @@ class Matrix():
         return total
 
     def __add__(self, other):
-        a = np.self.matrix
-        b = np.other.matrix
-        return a + b
+        return np.array(self.matrix) + np.array(other.matrix)
 
 
-my_m1 = Matrix(5, 6)
-print(my_m)
+my_m1 = Matrix(4, 4)
+my_m2 = Matrix(4, 4)
+print(f'Первая матрица:\n {my_m1}')
+print(f'Вторая матрица:\n {my_m2}')
 
-my_m2 = Matrix(5,6)
-print(my_m1 + my_m2)
+print(f'Результат сложения двух матриц:\n {my_m1 + my_m2}')
